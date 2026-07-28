@@ -1,0 +1,23 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# AWS SAM
+.aws-sam/
+
+# VS Code
+.vscode/
+
+# Lambda build artifacts
+lambda_package/
+weather-pipeline-2026-sam/
+
+# Local weather data
+data/raw/
+
+# macOS
+.DS_Store
