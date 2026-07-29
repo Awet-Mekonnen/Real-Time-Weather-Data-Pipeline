@@ -6,11 +6,12 @@ An end-to-end serverless AWS project that automatically collects real-time weath
 
 ## Dashboard Preview
 
-
----
-
-## Architecture
-
+![alt text](<Dashboard 1-1.png>) 
+![alt text](<Current Weather-1.png>) 
+![alt text](<Temp Stats-1.png>) 
+![alt text](<Humidity Stat-1.png>) 
+![alt text](<Wind Speed Stats-1.png>)
+![alt text](<Latest Records Stats-1.png>) 
 
 ---
 
