@@ -24,4 +24,11 @@ def run_query(query):
     df = pd.read_sql(query, conn)
     conn.close()
 
-    return df
+    try:
+        return df
+    except DatabaseError as e:
+        # Print the underlying AWS Athena error message
+        print("Root Athena Error:", e)
+        if e.__cause__:
+            print("Cause:", e.__cause__)
+        raise e
