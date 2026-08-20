@@ -10,6 +10,11 @@ Globals:
     Runtime: python3.13
 
 Resources:
+  # S3 Bucket where weather data will be stored
+  WeatherBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: weather-pipeline-2026
   WeatherPipelineFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -19,8 +24,8 @@ Resources:
   
       Policies:
       - S3WritePolicy:
-            BucketName: weather-pipeline-2026
+            BucketName: !Ref WeatherBucket
       
       Environment:
         Variables:
-          AWS_BUCKET_NAME: weather-pipeline-2026
+          AWS_BUCKET_NAME: !Ref WeatherBucket
