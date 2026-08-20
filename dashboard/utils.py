@@ -1,4 +1,5 @@
-from pyathena import connect # connect is used to help connect to the weather pipeline database
+from pyathena import connect 
+# connect is used to help connect to the weather pipeline database
 import pandas as pd
 import streamlit as st
 
