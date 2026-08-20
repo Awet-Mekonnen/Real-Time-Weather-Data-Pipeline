@@ -24,7 +24,7 @@ def get_query(time_filter):
         order by timestamp desc
         """
     
-    else:
+    elif time_filter == "All":
         return """
         Select * from raw
         order by timestamp desc
