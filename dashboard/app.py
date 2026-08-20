@@ -35,7 +35,7 @@ query = get_query(time_filter)
 try:
     df = run_query(query)
 
-    df["timestamp"] = pd.to_datetime(df["timestamp"])
+    df["timestamp"] = pd.to_datetime(df["timestamp"], format = "mixed", utc = "true")
     df = df.sort_values("timestamp")
 
     display_map(df)
