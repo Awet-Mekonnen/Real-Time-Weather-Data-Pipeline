@@ -7,7 +7,7 @@ def get_query(time_filter):
     if time_filter == "Last 24 Hours":
         return """
         Select * from raw
-        where timestamp >= current_timestamp - interval '1' day
+        where from_iso8601_timestamp(timestamp) >= current_timestamp - interval '1' day
         order by timestamp desc"""
     
     elif time_filter == "Last 7 Days":
