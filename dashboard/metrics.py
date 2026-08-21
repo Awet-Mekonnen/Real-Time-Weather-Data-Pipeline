@@ -16,7 +16,7 @@ def display_metrics(df):
 
     c1.metric(
         "Temperature",
-        f"{temp:.2f} °C"
+        f"{temp:.2f} °F"
     )
 
     c2.metric(
