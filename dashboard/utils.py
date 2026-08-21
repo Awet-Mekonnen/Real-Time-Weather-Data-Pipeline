@@ -2,6 +2,7 @@ from pyathena import connect
 # connect is used to help connect to the weather pipeline database
 import pandas as pd
 import streamlit as st
+import os
 
 # Fetch credentials from Streamlit Secrets (or fallback to environment variables)
 aws_access_key = st.secrets.get("AWS_ACCESS_KEY_ID", os.getenv("AWS_ACCESS_KEY_ID"))
