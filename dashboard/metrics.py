@@ -11,7 +11,6 @@ def display_metrics(df):
     st.header("Current Weather")
     
     temp = latest['temperature']
-    temp = (temp * (9/5)) + 32
     # These columns are declared to display the values on the dashboard
     c1, c2, c3 = st.columns(3)
 
@@ -49,11 +48,6 @@ def display_stats(col, title, data, unit):
 
 # This if statement is used when the title is Temperature in order to convert the data
 # from celcius to Farenhite
-
-    if title == "Temperature":
-        avg = (avg * (9/5)) + 32
-        maximum = (maximum * (9/5)) + 32
-        minimum = (minimum * (9/5)) + 32
 
     with col:
         st.subheader(title)
